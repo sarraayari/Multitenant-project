@@ -3,7 +3,7 @@ var router = express.Router();
 
 const EF_SERVICE_NAME = 'kyma-multitenant-approuter-multitenancy';
 const EF_SERVICE_PORT = 8080;
-const EF_APIRULE_DEFAULT_NAMESPACE = '<namespace>';
+const EF_APIRULE_DEFAULT_NAMESPACE = 'kube-public';
 const KYMA_APIRULE_GROUP = 'gateway.kyma-project.io';
 const KYMA_APIRULE_VERSION = 'v1alpha1';
 const KYMA_APIRULE_PLURAL = 'apirules';
@@ -45,7 +45,7 @@ router.get("/", function(req, res, next) {
 router.put('/callback/v1.0/tenants/*', async function(req, res) {
     //1. create tenant unique URL
     var consumerSubdomain = req.body.subscribedSubdomain;
-    var tenantAppURL = "https:\/\/" + consumerSubdomain + "-approuter." + "<cluster-domain>";
+    var tenantAppURL = "https:\/\/" + consumerSubdomain + "-approuter." + "garden-kyma--acbfcf7-external";
 
     //2. create apirules with subdomain,
     const kc = new k8s.KubeConfig();
