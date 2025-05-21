@@ -30,9 +30,7 @@ metadata:
   creationTimestamp: null
   name: xsuaa-service-binding
 spec:
-  externalID: ""
-  instanceRef:
-    name: xsuaa-service
+  name: xsuaa-service
   secretName: xsuaa-service-binding
 
 ################### SaaS Provisioning Service ###################
@@ -62,7 +60,5 @@ metadata:
   creationTimestamp: null
   name: saas-registry-service-binding
 spec:
-  externalID: ""
-  instanceRef:
-    name: saas-registry-service
+  name: saas-registry-service
   secretName: saas-registry-service-binding

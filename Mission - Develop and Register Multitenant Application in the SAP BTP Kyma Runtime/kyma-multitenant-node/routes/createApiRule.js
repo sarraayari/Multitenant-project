@@ -30,7 +30,7 @@ function createApiRule(svcName, svcPort, host, clusterName) {
     };
 
     const apiRuleTemplate = {
-        apiVersion: 'gateway.kyma-project.io/v1alpha1',
+        apiVersion: 'gateway.kyma-project.io/v2alpha1',
         kind: 'APIRule',
         metadata: {
             name: host + '-apirule',

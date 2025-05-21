@@ -52,7 +52,7 @@ spec:
           value: "8080"
         - name: TMPDIR
           value: /tmp
-        image: sarraayari55/multitenant-kyma-backend:v1  # replace with your Docker Hub account name
+        image: sarraayari/multitenant-kyma-backend:v1  # replace with your Docker Hub account name
         name: kyma-multitenant-node-multitenancy
         ports:
         - name: http

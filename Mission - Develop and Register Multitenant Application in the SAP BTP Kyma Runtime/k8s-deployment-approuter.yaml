@@ -6,7 +6,7 @@ metadata:
 data:
   destinations: |
     [
-      {"name":"dest_kyma_multitenant_node","url":"https://dgqtvvdjy692mmzm-node.garder-kyma--acbfcf7-external","forwardAuthToken" : true}
+      {"name":"dest_kyma_multitenant_node","url":"https://dgqtvvdjy692mmzm-node.garden-kyma--acbfcf7-external","forwardAuthToken" : true}
     ]
 ---
 apiVersion: apps/v1
@@ -52,7 +52,7 @@ spec:
           value: "8080"
         - name: TMPDIR
           value: /tmp
-        image: sarraayari55/multitenant-approuter:v1   # replace with your Docker Hub account name
+        image: sarraayari/multitenant-approuter:v1   # replace with your Docker Hub account name
         livenessProbe:
           exec:
             command:
@@ -129,7 +129,7 @@ spec:
     app: kyma-multitenant-approuter-multitenancy
     release: multitenancy
 ---
-apiVersion: gateway.kyma-project.io/v1alpha1
+apiVersion: gateway.kyma-project.io/v1beta1
 kind: APIRule
 metadata:
   creationTimestamp: null
@@ -154,7 +154,7 @@ spec:
     host: dgqtvvdjy692mmzm-approuter.garden-kyma--acbfcf7-external
     name: kyma-multitenant-approuter-multitenancy
     port: 8080
----
+
 apiVersion: v1
 kind: ConfigMap
 metadata:

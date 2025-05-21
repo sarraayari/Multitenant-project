@@ -5,7 +5,7 @@ const EF_SERVICE_NAME = 'kyma-multitenant-approuter-multitenancy';
 const EF_SERVICE_PORT = 8080;
 const EF_APIRULE_DEFAULT_NAMESPACE = 'kube-public';
 const KYMA_APIRULE_GROUP = 'gateway.kyma-project.io';
-const KYMA_APIRULE_VERSION = 'v1alpha1';
+const KYMA_APIRULE_VERSION = 'v2alpha1';
 const KYMA_APIRULE_PLURAL = 'apirules';
 
 const k8s = require('@kubernetes/client-node');
