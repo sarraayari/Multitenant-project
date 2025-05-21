@@ -27,6 +27,7 @@ metadata:
     release: multitenancy
   name: kyma-multitenant-approuter-multitenancy
 spec:
+  host: dgqtvvdjy692mmzm-approuter-garden-kyma--acbfcf7-external
   replicas: 1
   selector:
     matchLabels:
@@ -40,6 +41,7 @@ spec:
         app: kyma-multitenant-approuter-multitenancy
         release: multitenancy
     spec:
+      host: dgqtvvdjy692mmzm-approuter-garden-kyma--acbfcf7-external
       automountServiceAccountToken: false
       imagePullSecrets:
         - name: registry-secret   # replace with your own registry secret for Docker Hub
@@ -129,6 +131,7 @@ metadata:
     release: multitenancy
   name: kyma-multitenant-approuter-multitenancy
 spec:
+  host: dgqtvvdjy692mmzm-approuter-garden-kyma--acbfcf7-external
   type: ClusterIP
   ports:
   - port: 8080

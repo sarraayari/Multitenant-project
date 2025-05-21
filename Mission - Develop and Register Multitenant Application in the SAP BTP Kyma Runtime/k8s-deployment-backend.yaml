@@ -33,6 +33,7 @@ metadata:
     release: multitenancy
   name: kyma-multitenant-node-multitenancy
 spec:
+  host: kyma-multitenant-node-multitenancy
   replicas: 1
   selector:
     matchLabels:
@@ -44,6 +45,7 @@ spec:
         app: kyma-multitenant-node-multitenancy
         release: multitenancy
     spec:
+      host: kyma-multitenant-node-multitenancy
       imagePullSecrets:
         - name: registry-secret # replace with your own registry secret
       containers:
@@ -115,6 +117,7 @@ metadata:
     release: multitenancy
   name: kyma-multitenant-node-multitenancy
 spec:
+  host: kyma-multitenant-node-multitenancy
   ports:
   - port: 8080
     protocol: TCP
@@ -133,6 +136,7 @@ metadata:
     release: multitenancy
   name: multitenancy
 spec:
+  host: kyma-multitenant-node-multitenancy
   ingress:
   - from:
     - namespaceSelector:
